@@ -5,16 +5,8 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def january(request):
-    return HttpResponse("This Works!")
-
-
-def february(request):
-    return HttpResponse("Walk for at least 20 minutes every day!")
-
-
-def march(request):
-    return HttpResponse("Hello There Handsome!")
+def monthly_challenge_by_number(request, month):
+    return HttpResponse(month)
 
 
 def month_challenge(request, month):
