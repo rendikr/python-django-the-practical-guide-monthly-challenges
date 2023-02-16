@@ -49,7 +49,8 @@ def month_challenge(request, month):
         challenge_text = monthly_challenges[month]
         capitalized_month = month.capitalize()
         return render(request, "challenges/challenge.html", {
-            "content": f"{capitalized_month} Challenge: {challenge_text}"
+            "month_name": month.capitalize(),
+            "content": challenge_text,
         })
     except:
         return HttpResponseNotFound("<h1>This month is not supported</h1>")
